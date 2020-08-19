@@ -105,29 +105,6 @@ public class Tbexpediente implements Serializable {
         this.estado = estado;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idtbExpediente != null ? idtbExpediente.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Tbexpediente)) {
-            return false;
-        }
-        Tbexpediente other = (Tbexpediente) object;
-        if ((this.idtbExpediente == null && other.idtbExpediente != null) || (this.idtbExpediente != null && !this.idtbExpediente.equals(other.idtbExpediente))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entidad.Tbexpediente[ idtbExpediente=" + idtbExpediente + " ]";
-    }
+    
     
 }
