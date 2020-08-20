@@ -42,7 +42,7 @@ public class Tbexpediente implements Serializable {
     private String nombre;
     @Basic(optional = false)
     @Column(name = "fojas")
-    private int fojas;
+    private String fojas;
     @Basic(optional = false)
     @Column(name = "tipo")
     private String tipo;
@@ -57,7 +57,7 @@ public class Tbexpediente implements Serializable {
         this.idtbExpediente = idtbExpediente;
     }
 
-    public Tbexpediente(Integer idtbExpediente, String nombre, int fojas, String tipo, String estado) {
+    public Tbexpediente(Integer idtbExpediente, String nombre, String fojas, String tipo, String estado) {
         this.idtbExpediente = idtbExpediente;
         this.nombre = nombre;
         this.fojas = fojas;
@@ -81,11 +81,11 @@ public class Tbexpediente implements Serializable {
         this.nombre = nombre;
     }
 
-    public int getFojas() {
+    public String getFojas() {
         return fojas;
     }
 
-    public void setFojas(int fojas) {
+    public void setFojas(String fojas) {
         this.fojas = fojas;
     }
 

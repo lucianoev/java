@@ -4,7 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entidad.Tbexpediente</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/mysql"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/expediente"/>
       <property name="javax.persistence.jdbc.user" value="Luciano"/>
       <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="1234"/>

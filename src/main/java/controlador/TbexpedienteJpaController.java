@@ -13,6 +13,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -25,10 +26,14 @@ public class TbexpedienteJpaController implements Serializable {
     public TbexpedienteJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
+    //conexion con unidad de persistencia
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_gestionExpedientes_jar_1.0-SNAPSHOTPU") ;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
+    }
+
+    public TbexpedienteJpaController() {
     }
 
     public void create(Tbexpediente tbexpediente) {
@@ -57,7 +62,7 @@ public class TbexpedienteJpaController implements Serializable {
             if (msg == null || msg.length() == 0) {
                 Integer id = tbexpediente.getIdtbExpediente();
                 if (findTbexpediente(id) == null) {
-                    throw new NonexistentEntityException("The tbexpediente with id " + id + " no longer exists.");
+                    throw new NonexistentEntityException("El expediente con id " + id + " no  exists.");
                 }
             }
             throw ex;
