@@ -19,8 +19,8 @@ public class expedienteTest {
         
     tbExpedienteDAO edao = new tbExpedienteDAO();
       // System.out.println(edao.actualizarExpediente(1,"Federico Ramayo", "Pago", "Iniciado", "2"));    
-       // System.out.println(edao.instertarExpediente("Pablo Aguero", "Proveedor", "En trámite","7"));
-        System.out.println(edao.eliminarExpediente(1));
+        System.out.println(edao.instertarExpediente("Pablo Aguero", "Haberes", "Iniciado","3"));
+        //System.out.println(edao.eliminarExpediente(1));
      }
     
 }
